@@ -359,9 +359,7 @@ When viewed on GitHub.com docs, the link gets rendered with the language code:
 and when viewed on GitHub Enterprise Server docs, the version is included as well:
 ```
 /en/enterprise-server@2.20/github/writing-on-github/creating-a-saved-reply
-```
-
-### Using AUTOTITLE for internal links
+ Using AUTOTITLE for internal links
 
 If you create an internal link, you can use the AUTOTITLE keyword to generate an article's title in the rendered link. See the [markup reference](https://docs.github.com/en/contributing/syntax-and-versioning-for-github-docs/using-markdown-and-liquid-in-github-docs#internal-links-with-autotitle) for details.
 
@@ -377,8 +375,7 @@ You can link directly to a different version of the page using the `currentArtic
 ```markdown
 {% ifversion fpt %}For more information, see the [{% data variables.product.prodname_ghe_cloud %} documentation](/enterprise-cloud@latest/{{ currentArticle }}).{% endif %}
 ```
-
-### Preventing transformations
+ Preventing transformations
 
 Sometimes you want to link to a Dotcom-only article in Enterprise content and you don't want the link to be Enterprise-ified. To prevent the transformation, you should include the preferred version in the path.
 
@@ -387,8 +384,7 @@ Sometimes you want to link to a Dotcom-only article in Enterprise content and yo
 ```
 
 Sometimes the canonical home of content moves outside the docs site. None of the links included in [`src/redirects/lib/external-sites.json`](/src/redirects/lib/external-sites.json) get rewritten. See  [`contributing/redirects.md`](/contributing/redirects.md) for more info about this type of redirect.
-
-### Legacy filepaths and redirects for links
+ Legacy filepaths and redirects for links
 
 Our docs contain links that use legacy filepaths such as `/article/article-name` or `/github/article-name`. Our docs also contain links that refer to articles by past names. Both of these link types function properly because of redirects, but they are bugs.
 
@@ -406,7 +402,7 @@ The homepage is the main Table of Contents file for the docs site. The homepage 
 
 `childGroups` is an array of mappings containing a `name` for the group, an optional `icon` for the group, and an array of `children`.  The `children` in the array must be present in the `children` frontmatter property.
 
-### Creating new product guides pages
+Creating new product guides pages
 
 To create a product guides page (e.g. [Actions' Guide page](https://docs.github.com/en/actions/guides)), create or modify an existing markdown file with these specific frontmatter values:
 
